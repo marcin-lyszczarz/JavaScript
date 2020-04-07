@@ -35,6 +35,7 @@ function clickReset(){
     time = 0;
     ulTime.textContent = '';
     numberOfLap = 1;
+    active = false;
 }
 
 function clickLap(){
