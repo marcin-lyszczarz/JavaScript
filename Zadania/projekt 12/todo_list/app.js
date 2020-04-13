@@ -26,12 +26,16 @@ const removeTask = (e) => {
 }
 
 const searchTask = () => {
-    const searchText = event.target.value.toLowerCase();
+    const inputText = event.target.value.toLowerCase();
 
-    let list = [...liTask];
-    list = list.filter(li => li.textContent.toLowerCase().includes(searchText));
-
+    let liElements = document.getElementsByClassName('liTask');
+    let list = [...liElements];
+    list = list.filter(li => li.textContent.toLowerCase().includes(inputText));
+        
     console.log(list);
+    ul.textContent = '';
+    list.forEach(li => ul.appendChild(li));
+
 }
 
 btnAdd.addEventListener('click', addTask);
