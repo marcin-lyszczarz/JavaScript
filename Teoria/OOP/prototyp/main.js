@@ -62,3 +62,14 @@ const arr = [5,6,7,8];
 Array.prototype.deleteElement = function (element){
     return this.splice(element, 1);
 }
+
+//Łańcuch prototypów
+
+arr instanceof Array;
+arr instanceof Object;
+arr instanceof Citizen;
+zenek instanceof Function;
+
+// Object.getPrototypeOf
+Object.getPrototypeOf(arr);
+Object.getPrototypeOf(zenek);
