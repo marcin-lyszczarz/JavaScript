@@ -1,18 +1,19 @@
 class Draw {
     constructor () {
-        this.option = ['red', 'green', 'blue', 'yellow', 'black'];
+        this.option = ['red', 'green', 'blue'];
         let _result = this.drawResult();
         this.getDrawResult = () => _result;
     }
     drawResult () {
         let colors = [];
-        let temp = [];
+        //let temp = [];
 
         for(let i = 0; i < this.option.length; i++){
             const index = Math.floor(Math.random() * this.option.length);
             const color = this.option[index];
-            temp.push(color);
-            colors = temp.slice(0,3);
+            //temp.push(color);
+            //colors = temp.slice(0,3);
+            colors.push(color);
         }
         return colors;
     }
